@@ -12,129 +12,74 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     margin: 50px 0px;
     width: 100%;
-    @media (max-width: 900px) {
+    @media (max-width: 1220px) {
       flex-direction: column;
+      align-items: flex-start;
       gap: 50px;
     }
+    @media (max-width: 500px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 20px;
+    }
     .mint-now {
-      position: relative;
-      border-radius: 0 !important;
-      background: transparent !important;
-      border: 2px solid #9e179a;
-      color: white !important;
-      line-height: 47px !important;
+      background: #0f1432;
+      border: none;
+      color: white;
       transition: 0.5s ease-in-out;
-      width: 100%;
-      max-width: 300px;
+      position: absolute;
+      top: 2px; /* equal to border thickness */
+      left: 2px; /* equal to border thickness */
+      width: 296px; /* container height - (border thickness * 2) */
+      height: 56px; /* container height - (border thickness * 2) */
       font-size: 20px;
       cursor: pointer;
-      @media (max-width: 442px) {
-        max-width: 220px;
-      }
+      clip-path: polygon(13% 0, 100% 0, 100% 50%, 87% 100%, 0 100%, 0% 50%);
+    }
+    .mint-wrap {
+      position: relative;
+      clip-path: polygon(
+        20% 0%,
+        100% 0,
+        100% 30%,
+        100% 80%,
+        80% 100%,
+        0 100%,
+        0 100%,
+        0% 20%
+      );
+      width: 300px;
+      height: 60px;
+      background: #9e179a;
+      box-sizing: border-box;
+      clip-path: polygon(13% 0, 100% 0, 100% 50%, 87% 100%, 0 100%, 0% 50%);
     }
     .calc {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       gap: 30px;
-      width: 100%;
-      @media (max-width: 900px) {
-        justify-content: center;
-        gap: 30px;
+      & .mint-wrap {
+        width: 80px;
+        height: 60px;
+        clip-path: polygon(30% 0, 100% 0, 100% 50%, 70% 97%, 0 100%, 0% 50%);
       }
-      @media (max-width: 442px) {
-        flex-direction: column;
-      }
-      & button,
-      & div {
-        max-width: 80px;
+      & .mint-now {
         display: flex;
+        clip-path: polygon(30% 0, 100% 0, 100% 50%, 70% 97%, 0 100%, 0% 50%);
         justify-content: center;
         align-items: center;
-        font-size: 26px;
-        cursor: pointer;
-      }
-      & button {
-        font-size: 30px;
+        width: 76px; /* container height - (border thickness * 2) */
+        height: 56px; /* container height - (border thickness * 2) */
       }
     }
     .mint-now:hover {
       background-color: #9e179a !important;
       border: 2px solid #9e179a;
       color: white;
-    }
-    .mint-now:before {
-      content: "";
-      position: absolute;
-      top: 12px;
-      right: -44px;
-      width: 63px;
-      height: 93px;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-      background: #0f1432;
-      display: inline-block;
-      user-select: none;
-    }
-
-    .mint-now:after {
-      content: "";
-      position: absolute;
-      top: 35px;
-      right: -7px;
-      width: 35px;
-      height: 2px;
-      background: #9e179a;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(134deg);
-      -ms-transform: rotate(134deg);
-      transform: rotate(134deg);
-    }
-    .mint-button::before {
-      content: "";
-      position: absolute;
-      top: -35px;
-      right: auto;
-      width: 63px;
-      height: 43px;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-      background: #0f1432;
-      display: inline-block;
-      left: -43px;
-    }
-    .mint-button::after {
-      content: "";
-      position: absolute;
-      top: 9px;
-      right: auto;
-      width: 32px;
-      height: 2px;
-      background: #9e179a;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(134deg);
-      -ms-transform: rotate(134deg);
-      -webkit-transform: rotate(134deg);
-      -ms-transform: rotate(134deg);
-      transform: rotate(134deg);
-      left: -5px;
     }
   }
   .mint {

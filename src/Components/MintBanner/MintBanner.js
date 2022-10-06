@@ -54,41 +54,47 @@ function MintBanner() {
                     secondTitle="Seconds"
                     titlePosition="bottom"
                   /> */}
-                  <button className="mint-now">
-                    Mint Now <span className="mint-button"></span>
-                  </button>
+                  <div className="mint-wrap">
+                    {" "}
+                    <button className="mint-now">Mint Now</button>
+                  </div>
+
                   <div className="calc">
-                    <button
-                      onClick={() => {
-                        setCounterVal((prev) => {
-                          if (prev > 1) {
-                            return prev - 1;
-                          } else {
-                            return prev;
-                          }
-                        });
-                      }}
-                      className="mint-now"
-                    >
-                      - <span className="mint-button"></span>
-                    </button>
-                    <div className="mint-now">
-                      {counterVal} <span className="mint-button"></span>
+                    <div className="mint-wrap">
+                      <button
+                        onClick={() => {
+                          setCounterVal((prev) => {
+                            if (prev > 1) {
+                              return prev - 1;
+                            } else {
+                              return prev;
+                            }
+                          });
+                        }}
+                        className="mint-now"
+                      >
+                        -
+                      </button>
                     </div>
-                    <button
-                      onClick={() => {
-                        setCounterVal((prev) => {
-                          if (prev < 10) {
-                            return prev + 1;
-                          } else {
-                            return prev;
-                          }
-                        });
-                      }}
-                      className="mint-now"
-                    >
-                      + <span className="mint-button"></span>
-                    </button>
+                    <div className="mint-wrap">
+                      <div className="mint-now">{counterVal}</div>
+                    </div>
+                    <div className="mint-wrap">
+                      <button
+                        onClick={() => {
+                          setCounterVal((prev) => {
+                            if (prev < 10) {
+                              return prev + 1;
+                            } else {
+                              return prev;
+                            }
+                          });
+                        }}
+                        className="mint-now"
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
                 </div>
                 {/* mint now count down end here */}
