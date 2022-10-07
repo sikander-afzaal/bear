@@ -54,10 +54,6 @@ function MintBanner() {
                     secondTitle="Seconds"
                     titlePosition="bottom"
                   /> */}
-                  <div className="mint-wrap">
-                    {" "}
-                    <button className="mint-now">Mint Now</button>
-                  </div>
 
                   <div className="calc">
                     <div className="mint-wrap">
@@ -95,6 +91,10 @@ function MintBanner() {
                         +
                       </button>
                     </div>
+                  </div>
+                  <div className="mint-wrap">
+                    {" "}
+                    <button className="mint-now">Mint Now</button>
                   </div>
                 </div>
                 {/* mint now count down end here */}

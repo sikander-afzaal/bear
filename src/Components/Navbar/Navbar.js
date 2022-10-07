@@ -71,7 +71,7 @@ function Navbar() {
     <Wrapper>
       <div className="container">
         <div className="nav-logo">
-          <a href="/home">
+          <a href="/">
             {" "}
             <img src={Logo} className="img-fluid" alt="logo" />
           </a>

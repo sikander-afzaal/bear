@@ -18,10 +18,9 @@ const Wrapper = styled.nav`
     @media (max-width: 1220px) {
       flex-direction: column;
       align-items: flex-start;
-      gap: 50px;
     }
     @media (max-width: 500px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center;
       gap: 20px;
     }
@@ -38,6 +37,10 @@ const Wrapper = styled.nav`
       font-size: 20px;
       cursor: pointer;
       clip-path: polygon(13% 0, 100% 0, 100% 50%, 87% 100%, 0 100%, 0% 50%);
+
+      @media (max-width: 1220px) {
+        width: 260px;
+      }
     }
     .mint-wrap {
       position: relative;
@@ -56,12 +59,15 @@ const Wrapper = styled.nav`
       background: #9e179a;
       box-sizing: border-box;
       clip-path: polygon(13% 0, 100% 0, 100% 50%, 87% 100%, 0 100%, 0% 50%);
+      @media (max-width: 1220px) {
+        width: 264px;
+      }
     }
     .calc {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 30px;
+      gap: 12px;
       & .mint-wrap {
         width: 80px;
         height: 60px;
